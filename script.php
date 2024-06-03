@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Convertir les valeurs en float
+    
     $nombre1 = isset($_POST['number1']) ? (float)$_POST['number1'] : 0;
     $operateur = isset($_POST['operateur']) ? $_POST['operateur'] : '';
     $nombre2 = isset($_POST['number2']) ? (float)$_POST['number2'] : 0;
@@ -26,6 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $result = "Opérateur invalide";
     }
 }
+$calculeSalaire= "page.php";
+echo "<a href=\'$calculeSalaire\'></a>";
+
 ?>
 
 <!DOCTYPE html>
@@ -50,6 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <button type="submit" class="pt-2 font-bold text-green-700">Calculer</button>
     </form>
+    <a href="http://localhost/formation/calculesalaire/script.php" class="font-bold text-blue-500">Next<a/>
 
     <?php
     if (isset($result)) {
