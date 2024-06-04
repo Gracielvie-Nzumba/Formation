@@ -52,9 +52,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <h2 class='font-bold text-green-900 text-2xl'>Convertisseur de devises</h2>
-    <form action="" method="post" class="pt-4">
+    <form method="post" class="pt-4">
         <label for="montant" class="font-bold">Montant:</label>
-        <input id="montant" name="montant" step="0.01" required class="border-2 rounded-md"><br><br>
+        <input name="montant" step="0.01" class="border-2 rounded-md"><br><br>
 
         <label for="devises">De:</label>
         <select id="devises" name="devises">
