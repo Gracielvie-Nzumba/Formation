@@ -41,19 +41,19 @@ echo "<a href=\'$calculeSalaire\'></a>";
 <body>
     <h1 class="text-red-900 text-2xl font-bold">Calculatrice</h1>
     <form method="post" class="pt-4">
-        <input name="number1" placeholder="Number1">
+        <input name="number1" placeholder="Number1" required >
         <select name="operateur" required>
             <option value="+">add</option>
             <option value="-">soustration</option>
             <option value="*">multple</option>
             <option value="/">division</option>
         </select>
-        <input name="number2" placeholder="Number2">
+        <input name="number2" placeholder="Number2" required>
         <br/>
 
         <button type="submit" class="pt-2 font-bold text-green-700">Calculer</button>
     </form>
-    <a href="http://localhost/formation/calculesalaire/script.php" class="font-bold text-blue-500">Next<a/>
+    <a href="http://localhost/php.treading/calculdusalaire/script.php" class="font-bold text-blue-500">Next<a/>
 
     <?php
     if (isset($result)) {
