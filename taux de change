@@ -10,14 +10,14 @@ class Devises {
             'CDF' => 2800,
         ],
         'CDF' => [
-            'USD' => 0.00035,
-            'EUR' => 0.00032,
+            'USD' => 0.0035,
+            'EUR' => 0.0032,
         ],
     ];
 
     public function convert($montant, $devises, $change) {
         if (!isset($this->taux[$devises]) || !isset($this->taux[$devises][$change])) {
-            return "Conversion non supportée.";
+            return "Conversion impossible.";
         }
 
         $taux = $this->taux[$devises][$change];
@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <h2 class='font-bold text-green-900 text-2xl'>Convertisseur de devises</h2>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="pt-4">
+    <form method="post" class="pt-4">
         <label for="montant" class="font-bold">Montant:</label>
         <input id="montant" name="montant" step="0.01" required class="border-2 rounded-md"><br><br>
 
