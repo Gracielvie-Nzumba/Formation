@@ -43,7 +43,10 @@ echo "<a href='$tauxDeChange'><a/>";
         
         <button type="submit" value="Calculer le Salaire" class="font-bold text-green-700">Calculer le salaire</button>
     </form>
-    <a href="http://localhost/formation/Tpconversion/script.php" class="font-bold text-blue-600">Next<a/>
+    <div class="flex gap-4">
+    <a href="http://localhost/php.treading/calculatrice/script.php" class="font-bold text-grey-700">Return<a/>
+    <a href="http://localhost/php.treading/tauxdeChange/index.php" class="font-bold text-blue-600">Next<a/>
+    </div>
 
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
